@@ -11,6 +11,15 @@ A modified version of the shaker arm and shaker to fit the A4T toolhead.
 2. The shaker and shaker arm have indentations to align themselves to each other and prevent the shaker from twisting on the shaker arm, removing the need for the second M3 screw.  
 3. The shaker and shaker arm have been made slimmer in the X direction to ease clearance between the front left Z belt and the shaker when inserting and removing the bucket from the printer.
 
+## Which version to pick
+
+There are two versions of the shaker arm. Depending on your bed placement and overall z height of your blobifier you may get a better shaking "experience" with the Shaker_Arm_A4T_tighter_fit model. 
+
+## Important configuration setup!
+
+As the blobifier shaker arm sits above the plane of the bed, you have to ensure your minimum toolchange z height is adequate for the rear of the toolhead to clear the shaker arm when performing the cutting motion. 
+
+As such, it is strongly advised to set it to approximately 15-20mm, (variable_min_toolchange_z : 15.0) to ensure no chance of collisions with the shaker arm and the mounting location of your bed probe at the rear of the toolhead.
 
 ## Bill of Materials (BOM)
 
@@ -39,6 +48,7 @@ Install and calibrate your shaker Z height as per the Happy Hare instructions.
 
 - In a Voron 350, you might set `variable_shaker_arm_z` to `2mm`.  
 - If the A4T is rubbing against the bottom of the shaker, increase slightly to `2.5mm` or `3mm`.  
+- If using a beacon/cartographer or similar bed probe, it is recommended to set variable_min_toolchange_z : 15.0.
 
 ## Video
 
